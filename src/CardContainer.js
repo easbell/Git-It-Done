@@ -7,7 +7,8 @@ export class CardContainer extends Component {
     super(props);
 
     this.state = {
-      guessCorrectly: ''
+      guessCorrectly: '',
+      incorrectGuesses: []
     }
   }
 
@@ -24,10 +25,26 @@ export class CardContainer extends Component {
       }, 1000)
     }
   }
+
+  guessWrong = (wrongCard) => {
+    const wrongGuesses = [...this.state.incorrectGuesses, wrongCard]
+    this.setState({incorrectGuesses: wrongGuesses}, () => {
+      console.log(this.state.incorrectGuesses)
+    })
+  }
   
   render() {
     return (
       <div className="card-container">
+        {
+        <div>
+          <Card 
+            questions={this.props.allData}
+            displayMessage={this.displayMessage}
+            guessWrong={this.guessWrong}
+          />
+        </div>
+        }
         <div className="guess-message">
           {this.state.guessCorrectly &&
             <div>
@@ -40,14 +57,6 @@ export class CardContainer extends Component {
             </div>
           }
         </div>
-        {
-        <div>
-          <Card 
-            questions={this.props.allData}
-            displayMessage={this.displayMessage}
-          />
-        </div>
-        }
       </div>
     )
   }

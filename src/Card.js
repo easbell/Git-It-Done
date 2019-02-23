@@ -12,17 +12,23 @@ export class Card extends Component {
   }
   
   correctAnswer = (answer) => {
-      const { cardIndex } = this.state
-      const { questions, displayMessage } = this.props
-      this.setState({ cardIndex: this.state.cardIndex + 1 })
-      answer === questions[cardIndex].correctAnswer
-        ? displayMessage(true)
-        : displayMessage(false)
-    }
+    const { cardIndex } = this.state
+    const { questions, displayMessage } = this.props
+    this.setState({ cardIndex: this.state.cardIndex + 1 })
+    answer === questions[cardIndex].correctAnswer
+      ? displayMessage(true)
+      : this.answeredWrong();
+  }
+
+  answeredWrong = () => {
+    const { cardIndex } = this.state
+    const { displayMessage, guessWrong } = this.props
+    displayMessage(false)
+    guessWrong(this.props.questions[cardIndex])
+  }
     
   render() {
     const { cardIndex } = this.state
-    console.log(this.props.questions[this.state.cardIndex])
     return (
     <div className="flashcard">
       <h3>{this.props.questions[cardIndex].prompt}</h3>
@@ -39,9 +45,6 @@ export class Card extends Component {
           answer={this.props.questions[cardIndex].possibleChoices[2]}
           correctAnswer={this.correctAnswer}
         />
-      </div>
-      <div>
-        <button>Save Card</button>
       </div>
     </div>
     )
