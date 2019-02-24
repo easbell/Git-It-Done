@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CardContainer from './CardContainer';
+import Card from './Card';
 import { shallow } from 'enzyme';
+
+const displayMessageMock = jest.fn;
+const guessWrongMock = jest.fn;
 
 const mockData = [
   {
@@ -27,10 +30,13 @@ const mockData = [
   }
 ]
 
-describe('CardContainer', () => {
+
+describe('Card', () => {
   const wrapper = shallow(
-    <CardContainer
-      allData={mockData}
+    <Card 
+      questions={mockData}
+      displayMessage={displayMessageMock}
+      guessWrong={guessWrongMock}
     />
   );
 
@@ -39,13 +45,11 @@ describe('CardContainer', () => {
   });
 
   it('should have proper values for default states', () => {
-    expect(wrapper.state()).toEqual({guessCorrectly: '', incorrectGuesses: []});
+    expect(wrapper.state()).toEqual({cardIndex: 0});
   });
 
-  it('should update state when guessWrong is invoke', () => {
-    expect(wrapper.state('incorrectGuesses')).toEqual([]);
-    wrapper.instance().guessWrong(mockData[0]);
-    expect(wrapper.state('incorrectGuesses')).toEqual([mockData[0]])
+  it.skip('should invoke the correct function depending on if answer is right or wrong', () => {
+    wrapper.instance().correctAnswer('mkdir');
   });
-  
+
 })

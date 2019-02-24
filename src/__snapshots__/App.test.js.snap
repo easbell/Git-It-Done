@@ -4,7 +4,14 @@ exports[`App should match a snapshot with all data passed in 1`] = `
 <div
   className="App"
 >
-  <h1>
+  <h3
+    className="title intro"
+  >
+    All you need, to...
+  </h3>
+  <h1
+    className="title"
+  >
     Git It Done
   </h1>
   <CardContainer
