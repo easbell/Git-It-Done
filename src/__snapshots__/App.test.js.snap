@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match a snapshot with all data passed in 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Git It Done
+  </h1>
+  <CardContainer
+    allData={
+      Array [
+        Object {
+          "correctAnswer": "mkdir",
+          "id": 1,
+          "possibleChoices": Array [
+            "cdir",
+            "mkdir",
+            "newdir",
+          ],
+          "prompt": "Make a directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "cd",
+          "id": 2,
+          "possibleChoices": Array [
+            "change",
+            "cngdir",
+            "cd",
+          ],
+          "prompt": "Change directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "cd ..",
+          "id": 3,
+          "possibleChoices": Array [
+            "cd ..",
+            "cd .",
+            "prev ..",
+          ],
+          "prompt": "Go to previous directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "ls",
+          "id": 4,
+          "possibleChoices": Array [
+            "list",
+            "all",
+            "ls",
+          ],
+          "prompt": "List contents of directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "ls -a",
+          "id": 5,
+          "possibleChoices": Array [
+            "ls -h",
+            "ls -a",
+            "ls -hf",
+          ],
+          "prompt": "List contents of directory including hidden files",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "open [file]",
+          "id": 6,
+          "possibleChoices": Array [
+            "op [file]",
+            "of",
+            "open [file]",
+          ],
+          "prompt": "Open a file",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "clear",
+          "id": 7,
+          "possibleChoices": Array [
+            "blank",
+            "cl",
+            "clear",
+          ],
+          "prompt": "Clear the terminal screen",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "touch [file]",
+          "id": 8,
+          "possibleChoices": Array [
+            "create [file]",
+            "new [file]",
+            "touch [file]",
+          ],
+          "prompt": "Create a new file",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "pwd",
+          "id": 9,
+          "possibleChoices": Array [
+            "pwd",
+            "path",
+            "fpd",
+          ],
+          "prompt": "Full path to working directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "rm [file]",
+          "id": 10,
+          "possibleChoices": Array [
+            "del [file]",
+            "rmfile [file]",
+            "rm [file]",
+          ],
+          "prompt": "Remove a file",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "cp [file] [newfile]",
+          "id": 11,
+          "possibleChoices": Array [
+            "cdir",
+            "cp [file] [newfile]",
+            "copy [file] [newfile]",
+          ],
+          "prompt": "Copy a file to file",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "cp [file] [dir]",
+          "id": 12,
+          "possibleChoices": Array [
+            "cpf",
+            "cp [file] [newfile]",
+            "cp [file] [dir]",
+          ],
+          "prompt": "Copy a file to directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "mv [file] [dir]",
+          "id": 13,
+          "possibleChoices": Array [
+            "mv [file] [dir]",
+            "move [file] [newfile]",
+            "new [file] [dir]",
+          ],
+          "prompt": "Move a file to directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "rmdir [dir]",
+          "id": 14,
+          "possibleChoices": Array [
+            "remove [dir]",
+            "rmdir [dir]",
+            "del [dir]",
+          ],
+          "prompt": "Remove directory",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "rm -R [dir]",
+          "id": 15,
+          "possibleChoices": Array [
+            "rm -R [dir]",
+            "rmdir -A [dir]",
+            "del -R [dir]",
+          ],
+          "prompt": "Remove directory and contents",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "Ctrl + A",
+          "id": 16,
+          "possibleChoices": Array [
+            "Ctrl + A",
+            "Ctrl + left",
+            "Ctrl + D",
+          ],
+          "prompt": "Go to the beginning of the line you're currently typing on",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "Ctrl + E",
+          "id": 17,
+          "possibleChoices": Array [
+            "Ctrl + E",
+            "Ctrl + right",
+            "Ctrl + M",
+          ],
+          "prompt": "Go to the end of the line you're currently typing on",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "Ctrl + C",
+          "id": 18,
+          "possibleChoices": Array [
+            "Ctrl + C",
+            "q",
+            "Ctrl + Q",
+          ],
+          "prompt": "Kill whatever you are running",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "mkdir -p [dir]/[dir]",
+          "id": 19,
+          "possibleChoices": Array [
+            "mkdir -p [dir]/[dir]",
+            "mkdir [dir]/[dir]",
+            "mkdir -n [dir]/[dir]",
+          ],
+          "prompt": "Create nested directories",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "pbcopy < [file]",
+          "id": 20,
+          "possibleChoices": Array [
+            "copy [file]",
+            "pbcopy < [file]",
+            "copy < [file]",
+          ],
+          "prompt": "Copies file contents to clipboard",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "pbpaste",
+          "id": 21,
+          "possibleChoices": Array [
+            "paste",
+            "pbpaste",
+            "pasteNew",
+          ],
+          "prompt": "Paste clipboard contents",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "pbpaste > [file]",
+          "id": 22,
+          "possibleChoices": Array [
+            "pbpaste > [file]",
+            "paste > [file]",
+            "pasteNew > [file]",
+          ],
+          "prompt": "Paste clipboard contents into file",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git init",
+          "id": 23,
+          "possibleChoices": Array [
+            "git init",
+            "git repo",
+            "git new",
+          ],
+          "prompt": "Create a new git repository",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git clone",
+          "id": 24,
+          "possibleChoices": Array [
+            "git clone",
+            "git copy",
+            "git remote",
+          ],
+          "prompt": "Checkout an existing remote repository",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git remote add origin",
+          "id": 25,
+          "possibleChoices": Array [
+            "git remote add origin",
+            "git add remote",
+            "git new remote origin",
+          ],
+          "prompt": "Connect your repo to a remote server",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git checkout -b'",
+          "id": 26,
+          "possibleChoices": Array [
+            "git -n branch",
+            "git checkout -b",
+            "git check branch",
+          ],
+          "prompt": "Checkout a new branch",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git add .",
+          "id": 27,
+          "possibleChoices": Array [
+            "git add .",
+            "git add ..",
+            "git add changes",
+          ],
+          "prompt": "Add all your changes",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git commit -m",
+          "id": 28,
+          "possibleChoices": Array [
+            "git commit -m",
+            "git commit",
+            "git new commit -m",
+          ],
+          "prompt": "Commit your changes with a message",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git push origin",
+          "id": 29,
+          "possibleChoices": Array [
+            "git push remote",
+            "git push origin",
+            "git origin remote",
+          ],
+          "prompt": "Push changes to remote repository",
+          "save": false,
+        },
+        Object {
+          "correctAnswer": "git merge branchName",
+          "id": 30,
+          "possibleChoices": Array [
+            "git merge branchName",
+            "git branch merge",
+            "git origin merge",
+          ],
+          "prompt": "Merge local branch",
+          "save": false,
+        },
+      ]
+    }
+  />
+</div>
+`;

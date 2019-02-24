@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardContainer from './CardContainer.js';
-import MockData from './liz-data.js';
+import data from './liz-data.js';
 import './App.css';
 
 class App extends Component {
@@ -8,9 +8,10 @@ class App extends Component {
     super();
 
     this.state = {
-      allData: MockData.terminalAndGit
+      allData: data.terminalAndGit
     }
   }
+
   render() {
     const { allData } = this.state
     return (
