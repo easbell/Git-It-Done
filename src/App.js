@@ -12,6 +12,11 @@ class App extends Component {
     }
   }
 
+  setToLocalStorage = (incorrectAnswers) => {
+    const stringifiedQuestions = JSON.stringify(incorrectAnswers)
+    localStorage.setItem('savedQuestions', stringifiedQuestions)
+  }
+  
   render() {
     const { allData } = this.state
     return (
@@ -20,6 +25,7 @@ class App extends Component {
         <h1 className="title">Git It Done</h1>
         <CardContainer
           allData={allData}
+          setToLocalStorage={this.setToLocalStorage}
         />
       </div>
     );

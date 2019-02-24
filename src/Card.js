@@ -12,6 +12,7 @@ export class Card extends Component {
   }
   
   correctAnswer = (answer) => {
+    console.log(answer)
     const { cardIndex } = this.state
     const { questions, displayMessage } = this.props
     this.setState({ cardIndex: this.state.cardIndex + 1 })
