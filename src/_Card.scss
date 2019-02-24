@@ -8,11 +8,14 @@
   align-items: center;
   padding: 20px;
   height: 20rem;
-  margin: 0 auto;
-  color: #292831;
-  font-size: 2rem;
   opacity: 0.94;
-  margin: 50px auto;
+  margin: 50px auto 18px;
+}
+
+.prompt {
+  padding: 0px 35px;
+  color: #29262d;
+  font-size: 2rem;
 }
 
 .answer-btns {
@@ -24,10 +27,5 @@
 }
 
 .answer-btns button {
-  width: 132px;
-  height: 55px;
-  font-size: 1.1rem;
-  border-radius: 14px;
-  margin: 0px 13px;
-  background-color: #a3a2ae;
+  @include buttonStyle
 }

@@ -1,0 +1,30 @@
+@mixin buttonStyle() {
+  width: 132px;
+  height: 55px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  box-shadow: 2px 2px 3px #5f5e67;
+  margin: 0px 13px;
+  background-color: #a3a2ae;
+  border: 0;
+  &:hover {
+    background-color: #37343b;
+    color: #fff;
+  }
+}
+
+@mixin headerStyle() {
+  background: url('./lettering.jpg');
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin pStyle() {
+  text-align: center;
+  background: rgba(79, 76, 83, 0.95);
+  padding: 15px;
+  color: #fff;
+  border-radius: 17px;
+  font-size: 1.4rem;
+}

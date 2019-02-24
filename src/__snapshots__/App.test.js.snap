@@ -14,6 +14,17 @@ exports[`App should match a snapshot with all data passed in 1`] = `
   >
     Git It Done
   </h1>
+  <p>
+    You've gotten 
+    0
+     correct!
+  </p>
+  <button
+    className="reset"
+    onClick={[Function]}
+  >
+    Reset Saved Cards
+  </button>
   <CardContainer
     allData={
       Array [
@@ -26,7 +37,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "newdir",
           ],
           "prompt": "Make a directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "cd",
@@ -37,7 +47,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "cd",
           ],
           "prompt": "Change directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "cd ..",
@@ -48,7 +57,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "prev ..",
           ],
           "prompt": "Go to previous directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "ls",
@@ -59,7 +67,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "ls",
           ],
           "prompt": "List contents of directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "ls -a",
@@ -70,7 +77,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "ls -hf",
           ],
           "prompt": "List contents of directory including hidden files",
-          "save": false,
         },
         Object {
           "correctAnswer": "open [file]",
@@ -81,7 +87,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "open [file]",
           ],
           "prompt": "Open a file",
-          "save": false,
         },
         Object {
           "correctAnswer": "clear",
@@ -92,7 +97,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "clear",
           ],
           "prompt": "Clear the terminal screen",
-          "save": false,
         },
         Object {
           "correctAnswer": "touch [file]",
@@ -103,7 +107,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "touch [file]",
           ],
           "prompt": "Create a new file",
-          "save": false,
         },
         Object {
           "correctAnswer": "pwd",
@@ -114,7 +117,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "fpd",
           ],
           "prompt": "Full path to working directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "rm [file]",
@@ -125,7 +127,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "rm [file]",
           ],
           "prompt": "Remove a file",
-          "save": false,
         },
         Object {
           "correctAnswer": "cp [file] [newfile]",
@@ -136,7 +137,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "copy [file] [newfile]",
           ],
           "prompt": "Copy a file to file",
-          "save": false,
         },
         Object {
           "correctAnswer": "cp [file] [dir]",
@@ -147,7 +147,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "cp [file] [dir]",
           ],
           "prompt": "Copy a file to directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "mv [file] [dir]",
@@ -158,7 +157,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "new [file] [dir]",
           ],
           "prompt": "Move a file to directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "rmdir [dir]",
@@ -169,7 +167,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "del [dir]",
           ],
           "prompt": "Remove directory",
-          "save": false,
         },
         Object {
           "correctAnswer": "rm -R [dir]",
@@ -180,7 +177,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "del -R [dir]",
           ],
           "prompt": "Remove directory and contents",
-          "save": false,
         },
         Object {
           "correctAnswer": "Ctrl + A",
@@ -191,7 +187,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "Ctrl + D",
           ],
           "prompt": "Go to the beginning of the line you're currently typing on",
-          "save": false,
         },
         Object {
           "correctAnswer": "Ctrl + E",
@@ -202,7 +197,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "Ctrl + M",
           ],
           "prompt": "Go to the end of the line you're currently typing on",
-          "save": false,
         },
         Object {
           "correctAnswer": "Ctrl + C",
@@ -213,7 +207,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "Ctrl + Q",
           ],
           "prompt": "Kill whatever you are running",
-          "save": false,
         },
         Object {
           "correctAnswer": "mkdir -p [dir]/[dir]",
@@ -224,7 +217,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "mkdir -n [dir]/[dir]",
           ],
           "prompt": "Create nested directories",
-          "save": false,
         },
         Object {
           "correctAnswer": "pbcopy < [file]",
@@ -235,7 +227,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "copy < [file]",
           ],
           "prompt": "Copies file contents to clipboard",
-          "save": false,
         },
         Object {
           "correctAnswer": "pbpaste",
@@ -246,7 +237,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "pasteNew",
           ],
           "prompt": "Paste clipboard contents",
-          "save": false,
         },
         Object {
           "correctAnswer": "pbpaste > [file]",
@@ -257,7 +247,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "pasteNew > [file]",
           ],
           "prompt": "Paste clipboard contents into file",
-          "save": false,
         },
         Object {
           "correctAnswer": "git init",
@@ -268,7 +257,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git new",
           ],
           "prompt": "Create a new git repository",
-          "save": false,
         },
         Object {
           "correctAnswer": "git clone",
@@ -279,7 +267,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git remote",
           ],
           "prompt": "Checkout an existing remote repository",
-          "save": false,
         },
         Object {
           "correctAnswer": "git remote add origin",
@@ -290,10 +277,9 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git new remote origin",
           ],
           "prompt": "Connect your repo to a remote server",
-          "save": false,
         },
         Object {
-          "correctAnswer": "git checkout -b'",
+          "correctAnswer": "git checkout -b",
           "id": 26,
           "possibleChoices": Array [
             "git -n branch",
@@ -301,7 +287,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git check branch",
           ],
           "prompt": "Checkout a new branch",
-          "save": false,
         },
         Object {
           "correctAnswer": "git add .",
@@ -312,7 +297,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git add changes",
           ],
           "prompt": "Add all your changes",
-          "save": false,
         },
         Object {
           "correctAnswer": "git commit -m",
@@ -323,7 +307,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git new commit -m",
           ],
           "prompt": "Commit your changes with a message",
-          "save": false,
         },
         Object {
           "correctAnswer": "git push origin",
@@ -334,7 +317,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git origin remote",
           ],
           "prompt": "Push changes to remote repository",
-          "save": false,
         },
         Object {
           "correctAnswer": "git merge branchName",
@@ -345,7 +327,6 @@ exports[`App should match a snapshot with all data passed in 1`] = `
             "git origin merge",
           ],
           "prompt": "Merge local branch",
-          "save": false,
         },
       ]
     }

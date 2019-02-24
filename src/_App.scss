@@ -1,0 +1,30 @@
+.App {
+  min-height: 100vh;
+}
+
+.title {
+  @include headerStyle;
+  font-size: 9rem;
+  margin: 1px 30px;
+  font-weight: bold;
+}
+
+.reset {
+  @include buttonStyle;
+  float: right;
+  position: relative;
+  bottom: 300px;
+  right: 33px;
+  font-size: .9rem;
+}
+
+.intro {
+  font-size: 3.5rem;
+  padding: 16px 0px 0px 10px;
+}
+
+p {
+  @include pStyle;
+  width: 320px;
+  margin: 25px 0px 0px 35px;
+}

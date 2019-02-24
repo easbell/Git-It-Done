@@ -7,7 +7,7 @@ exports[`CardContainer should match snapshot with all data passed in 1`] = `
   <div>
     <Card
       displayMessage={[Function]}
-      guessWrong={[Function]}
+      guessRight={[Function]}
       questions={
         Array [
           Object {

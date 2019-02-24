@@ -1,27 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card should match snapshot with all data passed in 1`] = `
-<div
-  className="flashcard"
->
-  <h3>
-    Make a directory
-  </h3>
+<div>
   <div
-    className="answer-btns"
+    className="flashcard"
   >
-    <Button
-      answer="cdir"
-      correctAnswer={[Function]}
-    />
-    <Button
-      answer="mkdir"
-      correctAnswer={[Function]}
-    />
-    <Button
-      answer="newdir"
-      correctAnswer={[Function]}
-    />
+    <h3
+      className="prompt"
+    >
+      Make a directory
+    </h3>
+    <div
+      className="answer-btns"
+    >
+      <Button
+        answer="cdir"
+        checkAnswer={[Function]}
+      />
+      <Button
+        answer="mkdir"
+        checkAnswer={[Function]}
+      />
+      <Button
+        answer="newdir"
+        checkAnswer={[Function]}
+      />
+    </div>
   </div>
 </div>
 `;

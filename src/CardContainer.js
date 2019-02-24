@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Card from './Card.js';
-import './CardContainer.css';
 
 export class CardContainer extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       guessCorrectly: ''
@@ -25,8 +24,8 @@ export class CardContainer extends Component {
     }
   }
 
-  guessWrong = (wrongCard) => {
-    this.props.setToLocalStorage(wrongCard)
+  guessRight = (correctAnswer) => {
+    this.props.setToLocalStorage(correctAnswer)
   }
   
   render() {
@@ -37,20 +36,16 @@ export class CardContainer extends Component {
           <Card 
             questions={this.props.allData}
             displayMessage={this.displayMessage}
-            guessWrong={this.guessWrong}
+            guessRight={this.guessRight}
           />
         </div>
         }
         <div className="guess-message">
           {this.state.guessCorrectly &&
-            <div>
-              <h4>You're Right!</h4>
-            </div>
+            <p>You're Right!</p>
           }
           {this.state.guessCorrectly === false &&
-            <div>
-              <h4>That's wrong!</h4>
-            </div>
+            <p>That's wrong!</p>
           }
         </div>
       </div>

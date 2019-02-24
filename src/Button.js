@@ -4,8 +4,8 @@ export class Button extends Component {
   
   
   sendAnswer = () => {
-    const {correctAnswer} = this.props
-    correctAnswer(this.props.answer)
+    const {checkAnswer} = this.props
+    checkAnswer(this.props.answer)
   }
 
   render() {
