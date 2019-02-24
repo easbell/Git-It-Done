@@ -32,7 +32,7 @@ export class Card extends Component {
     return (
     <div className="flashcard">
       <h3>{this.props.questions[cardIndex].prompt}</h3>
-      <div>
+      <div className="answer-btns">
         <Button 
           answer={this.props.questions[cardIndex].possibleChoices[0]}
           correctAnswer={this.correctAnswer}

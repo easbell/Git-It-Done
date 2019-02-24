@@ -1,7 +1,7 @@
 .flashcard {
-  background-color: #4F7C8F;
+  background-color: #eaf3f5;
   border-radius: 30px;
-  box-shadow: 4px 4px 7px #325561;
+  box-shadow: 4px 4px 7px #5f5e67c9;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -9,5 +9,25 @@
   padding: 20px;
   height: 20rem;
   margin: 0 auto;
-  color: #fff;
+  color: #292831;
+  font-size: 2rem;
+  opacity: 0.94;
+  margin: 50px auto;
+}
+
+.answer-btns {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.answer-btns button {
+  width: 132px;
+  height: 55px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  margin: 0px 13px;
+  background-color: #a3a2ae;
 }
