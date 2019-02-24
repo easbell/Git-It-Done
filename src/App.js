@@ -16,6 +16,7 @@ class App extends Component {
     const { allData } = this.state
     return (
       <div className="App">
+        <h3 className="title intro">All you need, to...</h3>
         <h1 className="title">Git It Done</h1>
         <CardContainer
           allData={allData}
