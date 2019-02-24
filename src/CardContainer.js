@@ -7,8 +7,7 @@ export class CardContainer extends Component {
     super(props);
 
     this.state = {
-      guessCorrectly: '',
-      incorrectGuesses: []
+      guessCorrectly: ''
     }
   }
 
@@ -27,10 +26,7 @@ export class CardContainer extends Component {
   }
 
   guessWrong = (wrongCard) => {
-    const wrongGuesses = [...this.state.incorrectGuesses, wrongCard]
-    this.setState({incorrectGuesses: wrongGuesses}, () => {
-      this.props.setToLocalStorage(this.state.incorrectGuesses)
-    })
+    this.props.setToLocalStorage(wrongCard)
   }
   
   render() {

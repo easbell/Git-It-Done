@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import CardContainer from './CardContainer';
 import { shallow } from 'enzyme';
 
+const setToLocalStorageMock = jest.fn;
 const mockData = [
   {
     "id": 1,
@@ -31,6 +32,7 @@ describe('CardContainer', () => {
   const wrapper = shallow(
     <CardContainer
       allData={mockData}
+      setToLocalStorageMock={setToLocalStorageMock}
     />
   );
 
@@ -42,10 +44,11 @@ describe('CardContainer', () => {
     expect(wrapper.state()).toEqual({guessCorrectly: '', incorrectGuesses: []});
   });
 
-  it('should update state when guessWrong is invoke', () => {
+  it('should update state and invoke method when guessWrong is invoke', () => {
     expect(wrapper.state('incorrectGuesses')).toEqual([]);
     wrapper.instance().guessWrong(mockData[0]);
     expect(wrapper.state('incorrectGuesses')).toEqual([mockData[0]])
+    expect(setToLocalStorageMock).toBeCalled();
   });
   
 })

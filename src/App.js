@@ -8,13 +8,23 @@ class App extends Component {
     super();
 
     this.state = {
-      allData: data.terminalAndGit
+      allData: data.terminalAndGit,
+      incorrectGuesses: []
     }
   }
 
-  setToLocalStorage = (incorrectAnswers) => {
-    const stringifiedQuestions = JSON.stringify(incorrectAnswers)
-    localStorage.setItem('savedQuestions', stringifiedQuestions)
+  setToLocalStorage = (wrongAnswer) => {
+    const wrongGuesses = [...this.state.incorrectGuesses, wrongAnswer]
+    this.setState({incorrectGuesses: wrongGuesses}, () => {
+      const stringifiedQuestions = JSON.stringify(wrongGuesses)
+      localStorage.setItem('savedQuestions', stringifiedQuestions)
+    })
+  }
+
+  resetStoredCards = () => {
+    this.setState({incorrectGuesses: []}, () => {
+      localStorage.clear()
+    })
   }
   
   render() {
@@ -23,6 +33,9 @@ class App extends Component {
       <div className="App">
         <h3 className="title intro">All you need, to...</h3>
         <h1 className="title">Git It Done</h1>
+        <button 
+          className="reset" 
+          onClick={this.resetStoredCards}>Reset Saved Cards</button>
         <CardContainer
           allData={allData}
           setToLocalStorage={this.setToLocalStorage}
