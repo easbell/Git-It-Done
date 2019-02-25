@@ -28,7 +28,7 @@ export class CardContainer extends Component {
         {
         <div>
           <Card 
-            questions={this.props.allData}
+            questions={this.props.questions}
             displayMessage={this.displayMessage}
             guessRight={this.guessRight}
             correctGuesses={this.props.correctGuesses}

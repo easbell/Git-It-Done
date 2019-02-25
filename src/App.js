@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
 import CardContainer from './CardContainer.js';
-import data from './liz-data.js';
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      allData: data.terminalAndGit,
+      allData: [],
       correctGuesses: []
     }
+  }
+
+  componentDidMount() {
+    fetch('http://memoize-datasets.herokuapp.com/api/v1/lizTerminalAndGit')
+      .then(response => response.json())
+      .then(result => {
+        this.setState({allData: result.lizTerminalAndGit})
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   componentWillMount = () => {
@@ -49,26 +59,33 @@ class App extends Component {
   
   render() {
     const { allData, correctGuesses } = this.state
+    // if(allData.length > 0) {
+    //   console.log(allData[0].prompt)
+    // }
     return (
       <div className="App">
-        <h3 className="title intro">All you need, to...</h3>
-        <h1 className="title">Git It Done</h1>
-        <p>You've gotten {correctGuesses.length} correct!</p>
-        <button 
-          className="reset" 
-          onClick={this.resetStoredCards}>Reset Saved Cards</button>
-        {correctGuesses.length === 30 && 
+        {allData.length > 0 && 
           <div>
-            <h4>Congrats, you got them all right!</h4>
-            <h4>Press 'Reset Saved Cards' to play again.</h4>
+            <h3 className="title intro">All you need, to...</h3>
+            <h1 className="title">Git It Done</h1>
+            <p>You've gotten {correctGuesses.length} correct!</p>
+            <button 
+              className="reset" 
+              onClick={this.resetStoredCards}>Reset Saved Cards</button>
+            {correctGuesses.length === 30 && 
+              <div>
+                <h4>Congrats, you got them all right!</h4>
+                <h4>Press 'Reset Saved Cards' to play again.</h4>
+              </div>
+            }
+            {correctGuesses.length < 30 && 
+              <CardContainer
+                questions={allData}
+                setToLocalStorage={this.setToLocalStorage}
+                correctGuesses={correctGuesses}
+              />
+            }
           </div>
-        }
-        {correctGuesses.length < 30 && 
-          <CardContainer
-            allData={allData}
-            setToLocalStorage={this.setToLocalStorage}
-            correctGuesses={this.state.correctGuesses}
-          />
         }
       </div>
     );

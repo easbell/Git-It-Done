@@ -37,7 +37,6 @@ export class Card extends Component {
   render() {
     const { cardIndex } = this.state
     return (
-    <div>
       <div className="flashcard">
         <h3 className="prompt">{this.props.questions[cardIndex].prompt}</h3>
         <div className="answer-btns">
@@ -58,7 +57,6 @@ export class Card extends Component {
           />
         </div>
       </div>
-    </div>
     )
   }
 }
