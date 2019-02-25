@@ -10,18 +10,12 @@ export class CardContainer extends Component {
     }
   }
 
-  displayMessage = (boolean) => {
-    if(boolean) {
-      this.setState({guessCorrectly: true})
-      setTimeout(() => {
-        this.setState({guessCorrectly: ''})
-      }, 1000)
-    } else {
-      this.setState({guessCorrectly: false})
-      setTimeout(() => {
-        this.setState({guessCorrectly: ''})
-      }, 1000)
-    }
+  displayMessage = (message) => {
+    message ? this.setState({guessCorrectly: true}) 
+            : this.setState({guessCorrectly: false})
+    setTimeout(() => {
+      this.setState({guessCorrectly: ''})
+    }, 1000)
   }
 
   guessRight = (correctAnswer) => {
@@ -37,6 +31,7 @@ export class CardContainer extends Component {
             questions={this.props.allData}
             displayMessage={this.displayMessage}
             guessRight={this.guessRight}
+            correctGuesses={this.props.correctGuesses}
           />
         </div>
         }

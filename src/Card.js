@@ -19,13 +19,21 @@ export class Card extends Component {
       : displayMessage(false);
   }
 
+  checkIndex = () => {
+    const { cardIndex } = this.state
+    const { questions } = this.props
+    if(cardIndex === questions.length - 1) {
+      this.setState({cardIndex: 0})
+    }
+  }
+
   answeredCorrectly = () => {
     const { cardIndex } = this.state
     const { displayMessage, guessRight } = this.props
     displayMessage(true)
     guessRight(this.props.questions[cardIndex])
   }
-    
+
   render() {
     const { cardIndex } = this.state
     return (
@@ -36,14 +44,17 @@ export class Card extends Component {
           <Button 
             answer={this.props.questions[cardIndex].possibleChoices[0]}
             checkAnswer={this.checkAnswer}
+            checkIndex={this.checkIndex}
           />
           <Button 
             answer={this.props.questions[cardIndex].possibleChoices[1]}
             checkAnswer={this.checkAnswer}
+            checkIndex={this.checkIndex}
           />
           <Button 
             answer={this.props.questions[cardIndex].possibleChoices[2]}
             checkAnswer={this.checkAnswer}
+            checkIndex={this.checkIndex}
           />
         </div>
       </div>

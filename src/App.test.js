@@ -38,7 +38,7 @@ describe('App', () => {
   });
 
   it('should have proper values for default states', () => {
-    expect(wrapper.state()).toEqual({allData: data.terminalAndGit});
+    expect(wrapper.state()).toEqual({allData: data.terminalAndGit, correctGuesses: []});
   });
 
   it('renders without crashing', () => {

@@ -67,6 +67,7 @@ class App extends Component {
           <CardContainer
             allData={allData}
             setToLocalStorage={this.setToLocalStorage}
+            correctGuesses={this.state.correctGuesses}
           />
         }
       </div>

@@ -4,14 +4,17 @@ export class Button extends Component {
   
   
   sendAnswer = () => {
-    const {checkAnswer} = this.props
+    const {checkAnswer, checkIndex} = this.props
     checkAnswer(this.props.answer)
+    checkIndex();
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.sendAnswer}>{this.props.answer}</button>
+        <button onClick={this.sendAnswer}>
+                {this.props.answer}
+        </button>
       </div>
     )
   }

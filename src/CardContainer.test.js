@@ -41,7 +41,7 @@ describe('CardContainer', () => {
   });
 
   it('should have proper values for default states', () => {
-    expect(wrapper.state()).toEqual({guessCorrectly: '', incorrectGuesses: []});
+    expect(wrapper.state()).toEqual({guessCorrectly: ''});
   });
 
   it('should update state and invoke method when guessWrong is invoke', () => {

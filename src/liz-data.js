@@ -38,13 +38,13 @@ const terminalAndGit = [
   {
     "id": 7,
     "prompt": "Clear the terminal screen",
-    "possibleChoices": ["blank", "cl", "clear"],
+    "possibleChoices": ["blank", "clear", "cl"],
     "correctAnswer": "clear"
   },
   {
     "id": 8,
     "prompt": "Create a new file",
-    "possibleChoices": ["create [file]", "new [file]", "touch [file]"],
+    "possibleChoices": ["touch [file]", "new [file]", "make [file]"],
     "correctAnswer": "touch [file]"
   },
   {
@@ -92,13 +92,13 @@ const terminalAndGit = [
   {
     "id": 16,
     "prompt": "Go to the beginning of the line you're currently typing on",
-    "possibleChoices": ["Ctrl + A", "Ctrl + left", "Ctrl + D"],
+    "possibleChoices": ["Ctrl + D", "Ctrl + left", "Ctrl + A"],
     "correctAnswer": "Ctrl + A"
   },
   {
     "id": 17,
     "prompt": "Go to the end of the line you're currently typing on",
-    "possibleChoices": ["Ctrl + E", "Ctrl + right", "Ctrl + M"],      
+    "possibleChoices": ["Ctrl + right", "Ctrl + E", "Ctrl + M"],      
     "correctAnswer": "Ctrl + E"
   },
   {
@@ -110,7 +110,7 @@ const terminalAndGit = [
   {
     "id": 19,
     "prompt": "Create nested directories",
-    "possibleChoices": ["mkdir -p [dir]/[dir]", "mkdir [dir]/[dir]", "mkdir -n [dir]/[dir]"], 
+    "possibleChoices": ["mkdir -n [dir]/[dir]", "mkdir [dir]/[dir]", "mkdir -p [dir]/[dir]"], 
     "correctAnswer": "mkdir -p [dir]/[dir]"
   },
   {
@@ -122,13 +122,13 @@ const terminalAndGit = [
   {
     "id": 21,
     "prompt": "Paste clipboard contents",
-    "possibleChoices": ["paste", "pbpaste", "pasteNew"],
+    "possibleChoices": ["pbpaste", "paste", "pasteNew"],
     "correctAnswer": "pbpaste"
   },
   {
     "id": 22,
     "prompt": "Paste clipboard contents into file",
-    "possibleChoices": ["pbpaste > [file]", "paste > [file]", "pasteNew > [file]"],
+    "possibleChoices": ["pasteNew > [file]", "paste > [file]", "pbpaste > [file]"],
     "correctAnswer": "pbpaste > [file]"
   },
   {
@@ -140,13 +140,13 @@ const terminalAndGit = [
   {
     "id": 24,
     "prompt": "Checkout an existing remote repository",
-    "possibleChoices": ["git clone", "git copy", "git remote"],
+    "possibleChoices": ["git copy", "git clone", "git remote"],
     "correctAnswer": "git clone"
   },
   {
     "id": 25,
     "prompt": "Connect your repo to a remote server",
-    "possibleChoices": ["git remote add origin", "git add remote", "git new remote origin"],
+    "possibleChoices": ["git new remote origin", "git add remote", "git remote add origin"],
     "correctAnswer": "git remote add origin"
   },
   {
@@ -164,7 +164,7 @@ const terminalAndGit = [
   {
     "id": 28,
     "prompt": "Commit your changes with a message",
-    "possibleChoices": ["git commit -m", "git commit", "git new commit -m"],
+    "possibleChoices": ["git commit", "git commit -m", "git new commit -m"],
     "correctAnswer": "git commit -m"
   },
   {
