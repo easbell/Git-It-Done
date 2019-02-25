@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 
 export class Button extends Component {
   sendAnswer = () => {
-    const {checkAnswer, checkIndex} = this.props
-    checkAnswer(this.props.answer)
-    checkIndex();
+    this.props.checkAnswer(this.props.answer)
+    this.props.checkIndex();
   }
 
   render() {

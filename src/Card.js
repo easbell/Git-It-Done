@@ -11,27 +11,21 @@ export class Card extends Component {
   }
   
   checkAnswer = (answer) => {
-    const { cardIndex } = this.state
-    const { questions, displayMessage } = this.props
     this.setState({ cardIndex: this.state.cardIndex + 1 })
-    answer === questions[cardIndex].correctAnswer
+    answer === this.props.questions[this.state.cardIndex].correctAnswer
       ? this.answeredCorrectly()
-      : displayMessage(false);
+      : this.props.displayMessage(false);
   }
 
   checkIndex = () => {
-    const { cardIndex } = this.state
-    const { questions } = this.props
-    if(cardIndex === questions.length - 1) {
+    if(this.state.cardIndex === this.props.questions.length - 1) {
       this.setState({cardIndex: 0})
     }
   }
 
   answeredCorrectly = () => {
-    const { cardIndex } = this.state
-    const { displayMessage, guessRight } = this.props
-    displayMessage(true)
-    guessRight(this.props.questions[cardIndex])
+    this.props.displayMessage(true)
+    this.props.guessRight(this.props.questions[this.state.cardIndex])
   }
 
   render() {

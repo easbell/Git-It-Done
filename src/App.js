@@ -15,32 +15,35 @@ class App extends Component {
     fetch('http://memoize-datasets.herokuapp.com/api/v1/lizTerminalAndGit')
       .then(response => response.json())
       .then(result => {
-        this.setState({allData: result.lizTerminalAndGit})
+        this.setState({allData: result.lizTerminalAndGit}, () => {
+          this.fetchFromLocalStorage();
+        })
       })
       .catch(error => {
         console.log(error)
-      })
+    })
   }
 
-  componentWillMount = () => {
+  fetchFromLocalStorage = () => {
     const storedQuestions = localStorage.getItem('correctQuestions')
-    if(localStorage.length > 0) {
+    if(localStorage.length) {
+      console.log('in fetch', storedQuestions)
       this.setState({correctGuesses: JSON.parse(storedQuestions)}, () => {
-      this.renderIncorrectCards();
-      });
+        this.renderIncorrectCards();
+      })
     }
   }
 
   renderIncorrectCards = () => {
     let index;
     const { allData, correctGuesses } = this.state;
-      correctGuesses.forEach(guess => {
-        let found = allData.find(el => {
-          return el.id === guess.id
-        })
-        index = allData.indexOf(found);
-        allData.splice(index, 1)
+    correctGuesses.forEach(guess => {
+      let found = allData.find(el => {
+        return el.id === guess.id
       })
+      index = allData.indexOf(found);
+      allData.splice(index, 1)
+    })
     this.setState({allData: allData})
   }
 
@@ -53,15 +56,13 @@ class App extends Component {
   }
 
   resetStoredCards = () => {
-    localStorage.clear()
-    this.setState({correctGuesses: []});
+    this.setState({allData: this.state.correctGuesses, correctGuesses: []});
+    localStorage.clear();
+    window.reload();
   }
   
   render() {
     const { allData, correctGuesses } = this.state
-    // if(allData.length > 0) {
-    //   console.log(allData[0].prompt)
-    // }
     return (
       <div className="App">
         {allData.length > 0 && 
