@@ -1,21 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Card from './Card';
 import { shallow } from 'enzyme';
 
-const displayMessageMock = jest.fn;
-const setToLocalStorageMock = jest.fn;
-const correctGuessesMock = jest.fn;
-const answeredCorrectlyMock = jest.fn;
+const displayMessageMock = jest.fn();
+const setToLocalStorageMock = jest.fn();
+const correctGuessesMock = jest.fn();
 
 const mockCard = [
-  {
-    "id": 1,
-    "prompt": "Make a directory",
-    "possibleChoices": ["cdir", "mkdir", "newdir"],
-    "correctAnswer": "mkdir",
-    "save": false
-  },
   {
     "id": 1,
     "prompt": "Make a directory",
@@ -58,10 +49,20 @@ describe('Card', () => {
     expect(wrapper.state()).toEqual({cardIndex: 0});
   });
 
-  it.skip('should invoke the correct function depending on if answer is right or wrong', () => {
+  it('should change state and invoke a function when checkAnswer is called', () => {
+    wrapper.setState( {cardIndex: 0} )
+
     wrapper.instance().checkAnswer('mkdir');
-    expect(wrapper.state()).toEqual({cardIndex: 1});
-    expect(answeredCorrectlyMock()).toHaveBeenCalled();
+    expect(wrapper.state('cardIndex')).toEqual(1);
+
+    wrapper.instance().checkAnswer('wefs');
+    expect(wrapper.state('cardIndex')).toEqual(2);
+  });
+
+  it('should reset cardIndex when checkIndex is invoked', () => {
+    wrapper.setState({cardIndex: 2});
+    wrapper.instance().checkIndex();
+    expect(wrapper.state('cardIndex')).toEqual(0);
   });
 
 })
