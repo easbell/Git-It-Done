@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import CardContainer from './CardContainer';
 import { shallow } from 'enzyme';
 
 const setToLocalStorageMock = jest.fn;
+const correctGuessesMock = jest.fn;
 const mockData = [
   {
     "id": 1,
@@ -32,7 +32,8 @@ describe('CardContainer', () => {
   const wrapper = shallow(
     <CardContainer
       allData={mockData}
-      setToLocalStorageMock={setToLocalStorageMock}
+      setToLocalStorage={setToLocalStorageMock}
+      correctGuesses={correctGuessesMock}
     />
   );
 
@@ -44,11 +45,16 @@ describe('CardContainer', () => {
     expect(wrapper.state()).toEqual({guessCorrectly: ''});
   });
 
-  it('should update state and invoke method when guessWrong is invoke', () => {
-    expect(wrapper.state('incorrectGuesses')).toEqual([]);
-    wrapper.instance().guessWrong(mockData[0]);
-    expect(wrapper.state('incorrectGuesses')).toEqual([mockData[0]])
-    expect(setToLocalStorageMock).toBeCalled();
+  it('should update state when displayMessage is invoked and true is passed in', () => {
+    expect(wrapper.state()).toEqual({guessCorrectly: ''});
+    wrapper.instance().displayMessage(true);
+    expect(wrapper.state()).toEqual({guessCorrectly: true});
+  });
+
+  it('should update state when displayMessage is invoked and false is passed in', () => {
+    expect(wrapper.state()).toEqual({guessCorrectly: true});
+    wrapper.instance().displayMessage(false);
+    expect(wrapper.state()).toEqual({guessCorrectly: false});
   });
   
 })

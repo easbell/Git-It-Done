@@ -4,9 +4,18 @@ import Card from './Card';
 import { shallow } from 'enzyme';
 
 const displayMessageMock = jest.fn;
-const guessWrongMock = jest.fn;
+const setToLocalStorageMock = jest.fn;
+const correctGuessesMock = jest.fn;
+const answeredCorrectlyMock = jest.fn;
 
-const mockData = [
+const mockCard = [
+  {
+    "id": 1,
+    "prompt": "Make a directory",
+    "possibleChoices": ["cdir", "mkdir", "newdir"],
+    "correctAnswer": "mkdir",
+    "save": false
+  },
   {
     "id": 1,
     "prompt": "Make a directory",
@@ -34,9 +43,10 @@ const mockData = [
 describe('Card', () => {
   const wrapper = shallow(
     <Card 
-      questions={mockData}
+      questions={mockCard}
       displayMessage={displayMessageMock}
-      guessWrong={guessWrongMock}
+      setToLocalStorage={setToLocalStorageMock}
+      correctGuesses={correctGuessesMock}
     />
   );
 
@@ -49,7 +59,9 @@ describe('Card', () => {
   });
 
   it.skip('should invoke the correct function depending on if answer is right or wrong', () => {
-    wrapper.instance().correctAnswer('mkdir');
+    wrapper.instance().checkAnswer('mkdir');
+    expect(wrapper.state()).toEqual({cardIndex: 1});
+    expect(answeredCorrectlyMock()).toHaveBeenCalled();
   });
 
 })

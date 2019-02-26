@@ -6,45 +6,9 @@ exports[`CardContainer should match snapshot with all data passed in 1`] = `
 >
   <div>
     <Card
+      correctGuesses={[Function]}
       displayMessage={[Function]}
-      guessRight={[Function]}
-      questions={
-        Array [
-          Object {
-            "correctAnswer": "mkdir",
-            "id": 1,
-            "possibleChoices": Array [
-              "cdir",
-              "mkdir",
-              "newdir",
-            ],
-            "prompt": "Make a directory",
-            "save": false,
-          },
-          Object {
-            "correctAnswer": "cd",
-            "id": 2,
-            "possibleChoices": Array [
-              "change",
-              "cngdir",
-              "cd",
-            ],
-            "prompt": "Change directory",
-            "save": false,
-          },
-          Object {
-            "correctAnswer": "cd ..",
-            "id": 3,
-            "possibleChoices": Array [
-              "cd ..",
-              "cd .",
-              "prev ..",
-            ],
-            "prompt": "Go to previous directory",
-            "save": false,
-          },
-        ]
-      }
+      setToLocalStorage={[Function]}
     />
   </div>
   <div

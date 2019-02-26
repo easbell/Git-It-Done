@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Button from './Button.js';
 
 export class Card extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       cardIndex: 0
@@ -25,7 +25,7 @@ export class Card extends Component {
 
   answeredCorrectly = () => {
     this.props.displayMessage(true)
-    this.props.guessRight(this.props.questions[this.state.cardIndex])
+    this.props.setToLocalStorage(this.props.questions[this.state.cardIndex])
   }
 
   render() {

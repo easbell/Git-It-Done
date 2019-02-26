@@ -11,7 +11,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  fetchAllData() {
     fetch('http://memoize-datasets.herokuapp.com/api/v1/lizTerminalAndGit')
       .then(response => response.json())
       .then(result => {
@@ -21,13 +21,16 @@ class App extends Component {
       })
       .catch(error => {
         console.log(error)
-    })
+    }) 
+  }
+
+  componentDidMount() {
+    this.fetchAllData();
   }
 
   fetchFromLocalStorage = () => {
     const storedQuestions = localStorage.getItem('correctQuestions')
     if(localStorage.length) {
-      console.log('in fetch', storedQuestions)
       this.setState({correctGuesses: JSON.parse(storedQuestions)}, () => {
         this.renderIncorrectCards();
       })
@@ -56,9 +59,9 @@ class App extends Component {
   }
 
   resetStoredCards = () => {
-    this.setState({allData: this.state.correctGuesses, correctGuesses: []});
     localStorage.clear();
-    window.reload();
+    this.fetchAllData();
+    this.setState({correctGuesses: []});
   }
   
   render() {

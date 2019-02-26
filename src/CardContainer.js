@@ -17,10 +17,6 @@ export class CardContainer extends Component {
       this.setState({guessCorrectly: ''})
     }, 1000)
   }
-
-  guessRight = (correctAnswer) => {
-    this.props.setToLocalStorage(correctAnswer)
-  }
   
   render() {
     return (
@@ -30,7 +26,7 @@ export class CardContainer extends Component {
           <Card 
             questions={this.props.questions}
             displayMessage={this.displayMessage}
-            guessRight={this.guessRight}
+            setToLocalStorage={this.props.setToLocalStorage}
             correctGuesses={this.props.correctGuesses}
           />
         </div>
