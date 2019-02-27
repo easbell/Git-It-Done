@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Git It Done
+### A simple, straight forward studying tool for all things Git and Terminal.
 
-## Available Scripts
+## Install
+1. Fork and clone down this repo.
+2. Once localized,
+  `cd`
+   into the directory.
+3. Run `npm install`
 
-In the project directory, you can run:
+## About this Project
+This is my first solo React project. It was a great learning experience to take everything from the last six weeks and put it to use. I utilized a simple data set for my flashcards and through the use of conditional rendering and React component put together this study tool.
 
-### `npm start`
+### Tech & Frameworks
+- React ( & JavaScript)
+- SCSS
+- HTML
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Testing
+- Jest & Enzyme
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Screen Grabs 
+![git-it-done](https://user-images.githubusercontent.com/34728115/53460096-32986980-39f9-11e9-8c16-6d49ebf28a20.gif)
 
-### `npm test`
+![localhost_3000_ 2](https://user-images.githubusercontent.com/34728115/53460126-46dc6680-39f9-11e9-9369-aa5d6fd9472e.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![localhost_3000_ 4](https://user-images.githubusercontent.com/34728115/53460157-5f4c8100-39f9-11e9-80a6-2a03e090cd13.png)
