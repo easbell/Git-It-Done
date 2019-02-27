@@ -77,7 +77,7 @@ class App extends Component {
               className="reset" 
               onClick={this.resetStoredCards}>Reset Saved Cards</button>
             {correctGuesses.length === 30 && 
-              <div>
+              <div className="end-of-game">
                 <h4>Congrats, you got them all right!</h4>
                 <h4>Press 'Reset Saved Cards' to play again.</h4>
               </div>
