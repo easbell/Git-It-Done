@@ -10,6 +10,9 @@
   @media screen and (max-width: 765px) {
     font-size: 6rem;
   }
+  @media screen and (max-width: 530px) {
+    font-size: 4.5rem;
+  }
 }
 
 .reset {
@@ -29,10 +32,20 @@
 .intro {
   font-size: 3.5rem;
   padding: 16px 0px 0px 10px;
+  @media screen and (max-width: 765px) {
+    font-size: 2.7rem;
+  }
+  @media screen and (max-width: 530px) {
+    font-size: 1.9rem;
+  }
 }
 
 p {
   @include pStyle;
   width: 320px;
   margin: 25px 0px 0px 35px;
+  @media screen and (max-width: 530px) {
+    font-size: 1.2rem;
+    width: 262px;
+  }
 }
