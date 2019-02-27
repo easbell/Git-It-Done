@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should match snapshot with all props passed in 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    cdir
+  </button>
+</div>
+`;

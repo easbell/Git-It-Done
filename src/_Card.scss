@@ -10,12 +10,19 @@
   height: 20rem;
   opacity: 0.94;
   margin: 50px auto 18px;
+  @media screen and (max-width: 765px) {
+    margin: 103px auto 18px;
+  }
 }
 
 .prompt {
   padding: 0px 35px;
   color: #29262d;
   font-size: 2rem;
+  @media screen and (max-width: 765px) {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
 }
 
 .answer-btns {
@@ -24,8 +31,16 @@
   flex-direction: row;
   justify-content: space-around;
   margin-top: 20px;
+  @media screen and (max-width: 765px) {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 }
 
 .answer-btns button {
-  @include buttonStyle
+  @include buttonStyle;
+  @media screen and (max-width: 765px) {
+    margin: 5px auto;
+    width: 100%;
+  }
 }
